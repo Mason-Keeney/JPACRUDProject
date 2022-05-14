@@ -33,6 +33,8 @@ public class DailyJournal {
 	private Integer workoutDuration;
 	@Column(name = "drank_water")
 	private Boolean drankWater;
+	@Column(name = "photos")
+	private String photo;
 
 //	Constructors
 
@@ -143,8 +145,18 @@ public class DailyJournal {
 	public void setDrankWater(Boolean drankWater) {
 		this.drankWater = drankWater;
 	}
+	
+	
+	public String getPhoto() {
+		return photo;
+	}
 
-	// Methods
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+	
+	
+//	Methods
 
 	@Override
 	public String toString() {

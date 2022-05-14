@@ -3,6 +3,7 @@ package com.skilldistillery.jpadailyproject.entities;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDate;
 
@@ -47,22 +48,30 @@ class DailyJournalTest {
 	@DisplayName("DailyJournal book_name maps correctly")
 	void testDailyJournalBookName() {
 		assertNotNull(entry);
-		assertEquals("When the Brain Can't Hear", entry.getBookName());
+		assertEquals("The Inner Life of Cats", entry.getBookName());
 	}
 	
 	@Test
 	@DisplayName("DailyJournal maps correctly")
 	void testDailyJournalMapping() {
 		assertNotNull(entry);
-		LocalDate testDate = LocalDate.of(2022, 04, 29);
+		LocalDate testDate = LocalDate.of(2022, 5, 9);
 		assertEquals(testDate, entry.getDate());
 		assertEquals("1-14", entry.getPagesRead());
-		assertNull(entry.getReadingSummary());
-		assertEquals(207, entry.getWeight());
+		assertEquals("Meow meow meow meow (I was just dictating)", entry.getReadingSummary());
+		assertEquals(8, entry.getWeight());
 		assertEquals("walk", entry.getWorkoutOutside());
 		assertEquals(46, entry.getWorkoutOutsideDuration());
-		assertEquals("Eliptical", entry.getWorkout());
-		assertEquals(60, entry.getWorkoutDuration());
+		assertEquals("fight with brother", entry.getWorkout());
+		assertEquals(180, entry.getWorkoutDuration());
+	}
+	
+	@Test
+	@DisplayName("DailyJournal photo maps correctly")
+	void testDailyJournalPhoto(){
+		assertNotNull(entry);
+		assertTrue(!entry.getPhoto().isEmpty());
+		assertEquals("photos/image0.jpeg", entry.getPhoto());
 	}
 	
 

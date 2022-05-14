@@ -1,8 +1,10 @@
 package com.skilldistillery.jpadailyproject.data;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -24,7 +26,7 @@ public class JournalDAOImpl implements JournalDAO {
 
 	@Override
 	public List<DailyJournal> findAll() {
-		String jpql = "FIND dj FROM DailyJournal dj";
+		String jpql = "SELECT dj FROM DailyJournal dj";
 		return em.createQuery(jpql, DailyJournal.class).getResultList();
 	}
 	
@@ -59,6 +61,19 @@ public class JournalDAOImpl implements JournalDAO {
 		em.remove(journal);
 		return !em.contains(journal);
 		
+	}
+
+	@Override
+	public DailyJournal findByDate(LocalDateTime date) {
+		String jpql = "SELECT dj FROM daily_journal WHERE dj.date = :date";
+		try {
+			DailyJournal journal = em.createQuery(jpql, DailyJournal.class).setParameter("date", date).getSingleResult();
+			
+		} catch(NoResultException e ){
+			
+		}
+		
+		return null;
 	}
 
 }
