@@ -19,7 +19,7 @@
 		<input id="workout" type="text" name="workout" value="${journal.workout }" required/><br>
 			<input class="littleIn" id="workoutDuration" type="text" name="workoutDuration" value="${journal.workoutDuration}" required/>
 			 <br><br>
-			<input id="workoutOutside" type="text" name="workoutOutside" value="${journal.workoutOutsideDuration}" required/> <br>
+			<input id="workoutOutside" type="text" name="workoutOutside" value="${journal.workoutOutside}" required/> <br>
 			<input class="littleIn" id="workoutOutsideDuration" type="text" name="workoutOutsideDuration" value="${journal.workoutOutsideDuration}" required/>
 			<br><br>
 			<input id="photo" type="text" name="photo" value="${journal.photo}">

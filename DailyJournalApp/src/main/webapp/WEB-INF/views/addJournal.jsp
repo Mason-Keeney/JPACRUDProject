@@ -14,23 +14,23 @@
 		<div class="row">
 		<div class="form-group col-3">
 		<input id="workout" type="text" name="workout" placeholder="Workout" required/><br>
-			<input class="littleIn" id="workoutDuration" type="text" name="workoutDuration" placeholder="Duration" required/>
+			<input class="littleIn" id="workoutDuration" type="text" name="workoutDuration" placeholder="Duration(minutes)" required/>
 			 <br><br>
 			<input id="workoutOutside" type="text" name="workoutOutside" placeholder="Outdoor Workout" required/> <br>
-			<input class="littleIn" id="workoutOutsideDuration" type="text" name="workoutOutsideDuration" placeholder="Duration" required/>
+			<input class="littleIn" id="workoutOutsideDuration" type="text" name="workoutOutsideDuration" placeholder="Duration(minutes)" required/>
 			<br><br>
-			<input id="photo" type="text" name="photo" placeholder="Paste Image URL">
+			<input id="photo" type="text" name="photo" placeholder="Add Image URL (optional)">
 		</div>
 		<div class="form-group col-6">		
 			 <input id="bookName" type="text" name="bookName" placeholder="Book Name" required/><br>
 			 <input id="pagesRead" type="text" name="pagesRead" placeholder="Page Read" required/> <br>
-			 <textarea class="bigIn" id="readingSummary" type="text" name="readingSummary" placeholder="Summary (optional))"></textarea>
+			 <textarea class="bigIn" id="readingSummary" type="text" name="readingSummary" placeholder="Summary (optional)"></textarea>
 		</div>
 		<div class="form-group col-3">
 			<input class="littleIn" id=weight type="text" name="weight" placeholder="Weight (optional)"/> <hr>
 				<label for="drankWater">Finished Water?</label> <br>
-			<input type="radio" name="drankWater" value="True" />Yes <br> 
-			<input type="radio" name="drankWater" value="False" />No
+			<input type="radio" name="drankWater" value="true" />Yes <br> 
+			<input type="radio" name="drankWater" value="false" />No
 		</div>
 		</div>
 		<br><br>

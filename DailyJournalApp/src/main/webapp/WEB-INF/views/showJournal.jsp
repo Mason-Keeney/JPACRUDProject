@@ -54,25 +54,14 @@
 								</c:otherwise>
 							</c:choose>
 						</ul>
-						
+						<br><br><br>
+		<form class="editButton" action="updateJournal.do">
+		<input type="text" name="id" value="${journal.id}" hidden="true">
+		<input class="btn btn-primary" type="Submit" value="Edit">
+	</form>
 			</div>
 		</div>
 		<br><br>
-				<div class="row">
-					<div class="col-4">
-					
-					
-
-					</div>
-
-					<div class="col-4">
-						
-					</div>
-
-					<div class="col-4">
-						
-					</div>
-				</div>
 
 			</c:when>
 		</c:choose>
@@ -85,24 +74,26 @@
 		<input type="text" name="id" value="${journal.id}" hidden="true">
 		<input class="btn btn-primary" type="Submit" value="Previous">
 	</form>
-	<br>
-	<form action="updateJournal.do">
-		<input type="text" name="id" value="${journal.id}" hidden="true">
-		<input class="btn btn-primary" type="Submit" value="Edit">
-	</form>
+		
+	
 	</div>
-	<div class="col-2">
-		<form action="next.do">
+	<div class="col-4">
+	<form action="next.do">
 			<input type="text" name="id" value="${journal.id}" hidden="true">
 			<input class="btn btn-primary" type="Submit" value="Next">
-		</form>
-		<br>
-	<form action="deleteJournal.do">
+	</form>
+	
+	
+	
+	</div>		
+	<div class="col-6">
+	<form class="deleteButton" action="deleteJournal.do">
 		<input type="text" name="id" value="${journal.id}" hidden="true">
 		<input class="btn btn-primary" type="Submit" value="Delete">
 	</form>
 	</div>
-	<div class="col-8"></div>
+
+
 	</div>
 	
 	<br><br><hr>

@@ -1,10 +1,32 @@
 @charset "UTF-8";
 
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(70, 35, 127);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(70, 35, 127);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 180, 229);
+  border-radius: 10px;
+  border: 1px solid rgb(93, 59, 149);
+}
+
 body{
   margin: 0;
   padding-right: 3%;
-  padding-top: 4%;
+  padding-top: 3%;
   padding-bottom: 5%;
+  padding-left: 1%;
   background-color: rgb(46, 9, 47);
   background-image: url("background.png");
   color: rgb(243, 252, 194);
@@ -31,7 +53,7 @@ a{
 
 }
 .littleIn{
-	width:33% !important;
+	width:36% !important;
 }
 
 input[type=text], textarea{
@@ -49,10 +71,13 @@ input[type=radio]{
 	accent-color: rgb(79, 60, 109);
 }
 
-input[type=text]:autofill{
-	background-color: rgb(199, 180, 229);
-	color: rgb(79, 60, 109);
+input:-webkit-autofill {
+	border: 1px solid rgb(93, 59, 149);
 }
+input:autofill {
+	border: 1px solid rgb(93, 59, 149);
+}
+
 
 div.overflowDown{
 	height: 300px;
@@ -89,4 +114,13 @@ img{
 	border: 4px solid;
 	border-radius: 3px;
 }
+.deleteButton {
+	align-content: right;
+}
+
+.editButton{
+	align-content: right;
+}
+
+
 
