@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>WARNING</title>
+<jsp:include page="../bootstrapHead.jsp"></jsp:include>
+
 </head>
 <body>
 <h1>Are you sure you want to delete this Entry?</h1>
@@ -16,6 +18,8 @@
 <form action="index.do">
 <input type="submit" value="No">
 </form>
+
+	<jsp:include page="../bootstrapFoot.jsp"></jsp:include>
 
 </body>
 </html>

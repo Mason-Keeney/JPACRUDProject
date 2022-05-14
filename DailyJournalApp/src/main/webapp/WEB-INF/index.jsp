@@ -21,6 +21,10 @@
 	<h5>${message }</h5>
 	</c:when>
 	</c:choose>
+	
+	<form action="addJournal.do" method="get">
+	<input type="submit" value="Add new Entry">
+	</form>
 
 	<jsp:include page="bootstrapFoot.jsp"></jsp:include>
 </body>

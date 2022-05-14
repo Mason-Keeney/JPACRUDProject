@@ -71,6 +71,9 @@
 		<input type="text" name="id" value="${journal.id}" hidden="true">
 		<input type="Submit" value="Delete this Entry">
 	</form>
+	<form action="addJournal.do" method="get">
+	<input type="submit" value="Add new Entry">
+	</form>
 	<jsp:include page="../bootstrapFoot.jsp"></jsp:include>
 </body>
 </html>
