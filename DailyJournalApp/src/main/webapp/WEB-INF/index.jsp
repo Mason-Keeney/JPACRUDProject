@@ -10,7 +10,17 @@
 </head>
 <body>
 	<h1>Daily Journal</h1>
-	<p>Currently Reading: ${journal.bookName }</p>
+	<form action="showJournal.do" method="get">
+		<input type="text" name="journalid"/>
+		<input type="submit" value="Search"/>
+	</form>
+	
+
+	<c:choose>
+	<c:when test="${! empty message}">
+	<h5>${message }</h5>
+	</c:when>
+	</c:choose>
 
 	<jsp:include page="bootstrapFoot.jsp"></jsp:include>
 </body>

@@ -2,6 +2,9 @@ package com.skilldistillery.jpadailyproject.entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import java.time.LocalDate;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -44,7 +47,22 @@ class DailyJournalTest {
 	@DisplayName("DailyJournal book_name maps correctly")
 	void testDailyJournalBookName() {
 		assertNotNull(entry);
-		assertEquals("This is How Your Marriage Ends", entry.getBookName());
+		assertEquals("When the Brain Can't Hear", entry.getBookName());
+	}
+	
+	@Test
+	@DisplayName("DailyJournal maps correctly")
+	void testDailyJournalMapping() {
+		assertNotNull(entry);
+		LocalDate testDate = LocalDate.of(2022, 04, 29);
+		assertEquals(testDate, entry.getDate());
+		assertEquals("1-14", entry.getPagesRead());
+		assertNull(entry.getReadingSummary());
+		assertEquals(207, entry.getWeight());
+		assertEquals("walk", entry.getWorkoutOutside());
+		assertEquals(46, entry.getWorkoutOutsideDuration());
+		assertEquals("Eliptical", entry.getWorkout());
+		assertEquals(60, entry.getWorkoutDuration());
 	}
 	
 

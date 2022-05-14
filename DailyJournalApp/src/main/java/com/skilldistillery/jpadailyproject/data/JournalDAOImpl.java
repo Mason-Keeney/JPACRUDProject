@@ -27,5 +27,38 @@ public class JournalDAOImpl implements JournalDAO {
 		String jpql = "FIND dj FROM DailyJournal dj";
 		return em.createQuery(jpql, DailyJournal.class).getResultList();
 	}
+	
+	@Override
+	public DailyJournal addJournal(DailyJournal journal) {
+		em.persist(journal);
+		return journal;
+		
+	}
+
+	@Override
+	public DailyJournal updateJournal(DailyJournal journal) {
+		
+		DailyJournal managed = em.find(DailyJournal.class, journal.getId());
+		
+		managed.setBookName(journal.getBookName());
+		managed.setDrankWater(journal.getDrankWater());
+		managed.setPagesRead(journal.getPagesRead());
+		managed.setReadingSummary(journal.getReadingSummary());
+		managed.setWeight(journal.getWeight());
+		managed.setWorkout(journal.getWorkout());
+		managed.setWorkoutDuration(journal.getWorkoutDuration());
+		managed.setWorkoutOutside(journal.getWorkoutOutside());
+		managed.setWorkoutOutsideDuration(journal.getWorkoutOutsideDuration());
+		
+		return managed;
+		
+	}
+
+	@Override
+	public boolean destroyJournal(DailyJournal journal) {
+		em.remove(journal);
+		return !em.contains(journal);
+		
+	}
 
 }
