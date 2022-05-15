@@ -2,7 +2,7 @@
 
 ### Week 9 Weekend Project Skill Distillery
 
-##Overview
+## Overview
 The JPACRUDProject is a full-stack application that utilizes a single table in a database to store journal entries on a webpage. The journal entries are designed to cater to the 75 Hard challenge, so they have some required fields and some optional fields. The journal contains sections for:
 1. Two Workouts (1 outdoors) and their duration
 2. The Title of the book being read, the number of pages being read, and a summary of the daily reading.
@@ -12,21 +12,21 @@ The JPACRUDProject is a full-stack application that utilizes a single table in a
 
 The site has the full CRUD capabilities: journal entries can be created, displayed, edited and deleted.
 
-##Technologies Used
+## Technologies Used
 * Java
 * SQL
 * Hibernate
 * Spring Tool Suite
 * Spring Boot
 * JPA
-* HTML
+* JSA
 * CSS
 * Bootstrap
 * Git
 * GitHub
 * Gradle
-* Shell (.zsh)
+* Terminal
 
 
-##Lessons
+## Lessons
 The biggest take away that I have from this project is that I need to dedicate some time to learning the built in functionality of the Bootstrap JavaScript. It has some very useful features that can be implemented quickly if I take the time to learn them (and so I shall). Very fun working with Spring Boot and Hibernate, using the various flavor of beans to move data from the database to the Website, letting java manipulate it as needed felt easy and fast compared to other methods we've implemented.
