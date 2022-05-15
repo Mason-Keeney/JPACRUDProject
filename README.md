@@ -13,19 +13,15 @@ The JPACRUDProject is a full-stack application that utilizes a single table in a
 The site has the full CRUD capabilities: journal entries can be created, displayed, edited and deleted.
 
 ## Technologies Used
-* Java
-* SQL
-* Hibernate
-* Spring Tool Suite
-* Spring Boot
-* JPA
-* JSA
-* CSS
-* Bootstrap
-* Git
-* GitHub
-* Gradle
-* Terminal
+
+| Language | Web         | Framework     | Configuration Management   | Database   | Tools             |
+| -------- | ----------- | ------------- | -------------------------- | ---------- | ----------------- |
+| Java     | CSS         | Spring Boot   | Git                        | SQL        | Spring Tool Suite |
+| Terminal | JSA         | Spring MVC    | GitHub                     | JPA        | Gradle            |
+|          | HTML        |               |                            | JPQL       | Hibernate         |
+|          | Bootstrap   |               |                            |            |                   |
+
+
 
 
 ## Lessons
